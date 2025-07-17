@@ -12,14 +12,14 @@
 
 .back-header {
   height: 10vh;
-  background-color: #42DAF5;
+  background-color: #42daf5;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 18px;
 }
 
-.back-header a{
+.back-header a {
   text-decoration: none;
   color: #000;
 }
@@ -36,13 +36,13 @@
 .front-header {
   height: 10vh;
   padding: 0 18px;
-  background-color: #42DAF5;
+  background-color: #42daf5;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.front-header ul{
+.front-header ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,13 +50,13 @@
   list-style: none;
 }
 
-.front-header ul li a{
+.front-header ul li a {
   text-decoration: none;
   font-weight: bold;
   color: #000;
 }
 
-.front-header ul li a:hover{
+.front-header ul li a:hover {
   text-decoration: underline;
 }
 
@@ -79,7 +79,7 @@
   padding: 20px;
 }
 
-.front-section{
+.front-section {
   height: 80vh;
 }
 
@@ -102,38 +102,38 @@
   color: black;
 }
 
-.section .admin-sidebar .nav-links:hover{
+.section .admin-sidebar .nav-links:hover {
   text-decoration: underline;
   color: black;
 }
 
 /* =============== CONTACT US =============== */
-.contact-section{
+.contact-section {
   padding: 40px;
 }
 
-.contact-section h2{
+.contact-section h2 {
   text-align: center;
 }
 
-.contact-box{
+.contact-box {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.contact-box input{
+.contact-box input {
   padding: 18px 6px;
   outline: none;
 }
 
-.contact-box textarea{
+.contact-box textarea {
   padding: 18px 6px;
   outline: none;
   resize: vertical;
 }
 
-.contact-box button{
+.contact-box button {
   padding: 16px;
   color: #fff;
   background-color: #000;
@@ -143,13 +143,13 @@
 
 /* =============== LOGIN-SIGNUP =============== */
 
-.login-section{
+.login-section {
   display: flex;
   justify-content: center;
   padding: 20px;
 }
 
-.login-form{
+.login-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -157,19 +157,19 @@
   width: 520px;
 }
 
-.login-elements{
+.login-elements {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 100%;
 }
 
-.login-elements input{
+.login-elements input {
   padding: 16px 8px;
   outline: none;
 }
 
-.login-elements .login-btn{
+.login-elements .login-btn {
   margin-top: 10px;
   background-color: #000;
   color: #fff;
@@ -179,15 +179,15 @@
   cursor: pointer;
 }
 
-.error{
-  color: #FF0000;
+.error {
+  color: #ff0000;
   font-size: 12px;
   margin-left: 20px;
 }
 
 /* =============== HOME ============== */
 
-.hero-section{
+.hero-section {
   height: 40vh;
   display: flex;
   flex-direction: column;
@@ -196,7 +196,7 @@
   gap: 5px;
 }
 
-.hero-section button{
+.hero-section button {
   height: 42px;
   width: 220px;
   background-color: #000;
@@ -205,7 +205,7 @@
   font-weight: bold;
 }
 
-.extra-section{
+.extra-section {
   height: 40vh;
   background-color: #999;
   display: flex;
@@ -215,14 +215,14 @@
   gap: 5px;
 }
 
-.extra-section button{
+.extra-section button {
   height: 42px;
   width: 220px;
   background-color: #000;
   margin-top: 20px;
 }
 
-.extra-section button a{
+.extra-section button a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
@@ -230,42 +230,42 @@
 
 /* =============== Setting =================== */
 
-.setting-title{
+.setting-title {
   text-align: center;
   margin-bottom: 40px;
 }
 
-.setting-options{
+.setting-options {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.setting-btns{
+.setting-btns {
   list-style: none;
   border: solid 1px #000;
   padding: 20px;
   text-align: center;
 }
 
-.setting-btns a{
+.setting-btns a {
   text-decoration: none;
   color: #000;
 }
 
 /* =============== Blog =================== */
 
-.blog-section h2{
+.blog-section h2 {
   margin-bottom: 60px;
 }
 
-.blog-contents{
+.blog-contents {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-.blogs{
+.blogs {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -273,14 +273,14 @@
 
 /* =============== Blog =================== */
 
-.dashboard-section{
+.dashboard-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
 }
 
-.dashboard-section p{
+.dashboard-section p {
   border: solid 1px #000;
   padding: 220px;
 }
