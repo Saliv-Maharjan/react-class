@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className="back-header">
       <h2>Header</h2>
-      <NavLink to={"/"}>Back to Home</NavLink>
+      <NavLink to={"/admin"}>Back to Home</NavLink>
     </div>
   );
 };

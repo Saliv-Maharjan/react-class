@@ -11,6 +11,9 @@ import AdminLogin from "./pages/backend/AdminLogin";
 import UserLogin from "./pages/frontend/UserLogin";
 import UserSignup from "./pages/frontend/UserSignup";
 import Setting from "./pages/backend/Setting";
+import CreateBlog from "./pages/backend/CreateBlog";
+import EditBlog from "./pages/backend/EditBlog";
+import ViewBlog from "./pages/backend/ViewBlog";
 
 function App() {
   return (
@@ -30,7 +33,12 @@ function App() {
           <Route path="/admin" element={<BackendLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="/admin/dashboard" element={<Dashboard />} />
+
             <Route path="/admin/blog" element={<Blog />} />
+            <Route path="/admin/blog/create-blog" element={<CreateBlog />} />
+            <Route path="/admin/blog/edit-blog" element={<EditBlog />} />
+            <Route path="/admin/blog/view-blog" element={<ViewBlog />} />
+
             <Route path="/admin/setting" element={<Setting />} />
           </Route>
 

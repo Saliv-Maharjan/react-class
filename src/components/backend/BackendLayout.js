@@ -14,7 +14,7 @@ const BackendLayout = () => {
     if (AUTH_TOKEN !== authToken) {
       navigate("/admin-login");
     }
-  }, []);
+  });
 
   return (
     <>

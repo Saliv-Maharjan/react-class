@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 import { doLogin } from "../../services/backend/auth";
 
 const AdminLogin = () => {
@@ -73,6 +73,9 @@ const AdminLogin = () => {
               onClick={() => HandleBtnClick()}
             />
             <span className="error">{loginError}</span>
+          </div>
+          <div>
+            <NavLink to="/">Back to User Page</NavLink>
           </div>
         </div>
       </div>
