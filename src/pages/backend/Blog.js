@@ -1,9 +1,28 @@
-import { NavLink, Outlet } from "react-router";
+import { NavLink } from "react-router";
+import BlogTable from "../../components/backend/BlogTable";
 
 const Blog = () => {
-  const deleteButtonClicked = () => {
-    alert("Are you sure?");
-  };
+  const data = [
+    {
+      id: 1,
+      title: "Blog 1",
+      author: "Saliv",
+      createdDate: "2025/07/24",
+    },
+    {
+      id: 2,
+      title: "Blog 2",
+      author: "Saliv",
+      createdDate: "2025/07/24",
+    },
+    {
+      id: 3,
+      title: "Blog 3",
+      author: "Saliv",
+      createdDate: "2025/07/24",
+    },
+  ];
+
   return (
     <>
       <div className="blog-section">
@@ -25,53 +44,10 @@ const Blog = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Post 1</td>
-                <td>Saliv</td>
-                <td>2025-07-18</td>
-                <td className="action-btns">
-                  <button onClick={() => deleteButtonClicked()}>Delete</button>
-                  <NavLink to="/admin/blog/edit-blog">
-                    <button>Edit</button>
-                  </NavLink>
-                  <NavLink to="/admin/blog/view-blog">
-                    <button>View</button>
-                  </NavLink>
-                </td>
-              </tr>
-              <tr>
-                <td>Post 2</td>
-                <td>Saliv</td>
-                <td>2025-07-18</td>
-                <td className="action-btns">
-                  <button onClick={() => deleteButtonClicked()}>Delete</button>
-                  <NavLink to="/admin/blog/edit-blog">
-                    <button>Edit</button>
-                  </NavLink>
-                  <NavLink to="/admin/blog/view-blog">
-                    <button>View</button>
-                  </NavLink>
-                </td>
-              </tr>
-              <tr>
-                <td>Post 3</td>
-                <td>Saliv</td>
-                <td>2025-07-18</td>
-                <td className="action-btns">
-                  <button onClick={() => deleteButtonClicked()}>Delete</button>
-                  <NavLink to="/admin/blog/edit-blog">
-                    <button>Edit</button>
-                  </NavLink>
-                  <NavLink to="/admin/blog/view-blog">
-                    <button>View</button>
-                  </NavLink>
-                </td>
-              </tr>
+              <BlogTable blogData={data} />
             </tbody>
           </table>
         </div>
-
-        <Outlet />
       </div>
     </>
   );

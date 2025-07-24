@@ -281,7 +281,8 @@ td {
 }
 
 .blog-title button {
-  padding: 5px 32px;
+  padding: 8px 32px;
+  cursor: pointer;
 }
 
 .blog-contents {
@@ -297,7 +298,8 @@ td {
 }
 
 .action-btns button {
-  padding: 5px 22px;
+  padding: 8px 32px;
+  cursor: pointer;
 }
 
 /* =============== Create Blog =================== */
@@ -350,10 +352,35 @@ td {
   background-color: #fff;
   border: solid 1px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .create-section a {
   margin-top: 20px;
+}
+
+/* =============== Delete Blog =================== */
+
+.delete-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.delete-btns {
+  display: flex;
+  gap: 32px;
+}
+
+.delete-btns .delete-pri {
+  padding: 8px 32px;
+  cursor: pointer;
+}
+
+.delete-btns .delete-sec {
+  padding: 8px 32px;
+  cursor: pointer;
 }
 
 /* =============== Dashboard =================== */

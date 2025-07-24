@@ -14,6 +14,7 @@ import Setting from "./pages/backend/Setting";
 import CreateBlog from "./pages/backend/CreateBlog";
 import EditBlog from "./pages/backend/EditBlog";
 import ViewBlog from "./pages/backend/ViewBlog";
+import DeleteBlog from "./pages/backend/DeleteBlog";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Route path="/admin/blog/create-blog" element={<CreateBlog />} />
             <Route path="/admin/blog/edit-blog" element={<EditBlog />} />
             <Route path="/admin/blog/view-blog" element={<ViewBlog />} />
+            <Route path="/admin/blog/delete-blog" element={<DeleteBlog />} />
 
             <Route path="/admin/setting" element={<Setting />} />
           </Route>
