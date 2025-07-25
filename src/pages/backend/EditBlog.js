@@ -1,8 +1,10 @@
-import { useState } from "react";
-import { NavLink, useNavigate } from "react-router";
+import { useEffect, useState } from "react";
+import { NavLink, useNavigate, useParams } from "react-router";
+import { getBlogById } from "../../services/backend/blogData";
 
 const EditBlog = () => {
   const navigate = useNavigate();
+  const { id } = useParams();
 
   const buttonClick = () => {
     console.log(data);
@@ -19,6 +21,12 @@ const EditBlog = () => {
     const { name, value } = e.target;
     setData({ ...data, [name]: value });
   };
+
+  useEffect(() => {
+    const blog = getBlogById(id);
+    setData({ ...data, title: blog.title, desc: blog.desc });
+  }, []);
+
   return (
     <div className="create-section">
       <div className="create-box">

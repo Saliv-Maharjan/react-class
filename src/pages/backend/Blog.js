@@ -1,34 +1,21 @@
 import { NavLink } from "react-router";
 import BlogTable from "../../components/backend/BlogTable";
+import { useEffect, useState } from "react";
+import { getAllBlogs } from "../../services/backend/blogData";
 
 const Blog = () => {
-  const data = [
-    {
-      id: 1,
-      title: "Blog 1",
-      author: "Saliv",
-      createdDate: "2025/07/24",
-    },
-    {
-      id: 2,
-      title: "Blog 2",
-      author: "Saliv",
-      createdDate: "2025/07/24",
-    },
-    {
-      id: 3,
-      title: "Blog 3",
-      author: "Saliv",
-      createdDate: "2025/07/24",
-    },
-  ];
+  const [blogs, setBlogs] = useState([]);
+  useEffect(() => {
+    const data = getAllBlogs();
+    setBlogs(data);
+  }, []);
 
   return (
     <>
       <div className="blog-section">
         <div className="blog-title">
           <h2>BLOG PAGE</h2>
-          <NavLink to="/admin/blog/create-blog">
+          <NavLink to={`/admin/blog/create-blog`}>
             <button>Add Blog</button>
           </NavLink>
         </div>
@@ -44,7 +31,7 @@ const Blog = () => {
               </tr>
             </thead>
             <tbody>
-              <BlogTable blogData={data} />
+              <BlogTable blogData={blogs} />
             </tbody>
           </table>
         </div>

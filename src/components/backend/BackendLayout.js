@@ -7,14 +7,14 @@ import Sidebar from "./Sidebar";
 import Footer from "./Footer";
 
 const BackendLayout = () => {
-  const navigate = useNavigate("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const authToken = localStorage.getItem("AUTH_TOKEN");
     if (AUTH_TOKEN !== authToken) {
       navigate("/admin-login");
     }
-  });
+  }, []);
 
   return (
     <>

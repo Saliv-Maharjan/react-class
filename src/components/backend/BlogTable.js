@@ -11,13 +11,13 @@ const BlogTable = (props) => {
               <td>{item.author}</td>
               <td>{item.createdDate}</td>
               <td className="action-btns">
-                <NavLink to="/admin/blog/delete-blog">
+                <NavLink to={`/admin/blog/delete-blog/${item.id}`}>
                   <button>Delete</button>
                 </NavLink>
-                <NavLink to="/admin/blog/edit-blog">
+                <NavLink to={`/admin/blog/edit-blog/${item.id}`}>
                   <button>Edit</button>
                 </NavLink>
-                <NavLink to="/admin/blog/view-blog">
+                <NavLink to={`/admin/blog/view-blog/${item.id}`}>
                   <button>View</button>
                 </NavLink>
               </td>

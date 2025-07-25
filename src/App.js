@@ -37,9 +37,12 @@ function App() {
 
             <Route path="/admin/blog" element={<Blog />} />
             <Route path="/admin/blog/create-blog" element={<CreateBlog />} />
-            <Route path="/admin/blog/edit-blog" element={<EditBlog />} />
-            <Route path="/admin/blog/view-blog" element={<ViewBlog />} />
-            <Route path="/admin/blog/delete-blog" element={<DeleteBlog />} />
+            <Route path="/admin/blog/edit-blog/:id" element={<EditBlog />} />
+            <Route path="/admin/blog/view-blog/:id" element={<ViewBlog />} />
+            <Route
+              path="/admin/blog/delete-blog/:id"
+              element={<DeleteBlog />}
+            />
 
             <Route path="/admin/setting" element={<Setting />} />
           </Route>
