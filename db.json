@@ -1,0 +1,73 @@
+{
+  "blogData": [
+    {
+      "title": "Blog 1",
+      "author": "Saliv",
+      "desc": "This is the description for the Blog Post 1.",
+      "createdDate": "2025-07-25",
+      "id": "1"
+    },
+    {
+      "title": "Blog 2",
+      "author": "Pranish",
+      "desc": "This is the description for the Blog Post 2.",
+      "createdDate": "2025-07-25",
+      "id": "2"
+    },
+    {
+      "title": "Blog 3",
+      "author": "Raman",
+      "desc": "This is the description for the Blog Post 3.",
+      "createdDate": "2025-07-25",
+      "id": "3"
+    },
+    {
+      "title": "Blog 4",
+      "author": "Sujal",
+      "desc": "This is the description for the Blog Post 4.",
+      "createdDate": "2025-07-25",
+      "id": "4"
+    },
+    {
+      "title": "Blog 5",
+      "author": "Nikil",
+      "desc": "This is the description for the Blog Post 4.",
+      "createdDate": "2025-07-25",
+      "id": "5"
+    }
+  ],
+  "userData": [
+    {
+      "id": "1",
+      "firstName": "Saliv",
+      "lastName": "Maharjan",
+      "contactNum": "9866445340",
+      "emailAddress": "salivmrj@gmail.com",
+      "homeAddress": "Kritipur"
+    },
+    {
+      "id": "2",
+      "firstName": "Pranish",
+      "lastName": "Khadge",
+      "contactNum": "9866445341",
+      "emailAddress": "pigge@gmail.com",
+      "homeAddress": "Lalitpur, Lagankhel"
+    },
+    {
+      "id": "3",
+      "firstName": "Raman",
+      "lastName": "Kayastha",
+      "contactNum": "9866445342",
+      "emailAddress": "raman@gmail.com",
+      "homeAddress": "Bhaktapur, Thimi"
+    },
+    {
+      "id": "4",
+      "firstName": "Sujal",
+      "lastName": "Shakya",
+      "contactNum": "9866445344",
+      "emailAddress": "sujal@gmail.com",
+      "homeAddress": "Bhaktapur, Thimi"
+    }
+  ]
+}

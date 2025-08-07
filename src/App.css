@@ -404,7 +404,6 @@ td {
 }
 
 .user-view-section .user-box {
-  background-color: #dfdfdf;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -430,6 +429,7 @@ td {
 }
 
 .user-view-section .user-box .user-field button {
+  padding: 0px 5px;
   cursor: pointer;
 
   width: 100%;

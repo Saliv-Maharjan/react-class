@@ -6,8 +6,9 @@ import { getAllBlogs } from "../../services/backend/blogData";
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
-    const data = getAllBlogs();
-    setBlogs(data);
+    getAllBlogs().then((response) => {
+      setBlogs(response);
+    });
   }, []);
 
   return (

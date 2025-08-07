@@ -23,8 +23,11 @@ const EditBlog = () => {
   };
 
   useEffect(() => {
-    const blog = getBlogById(id);
-    setData({ ...data, title: blog.title, desc: blog.desc });
+    if (id) {
+      getBlogById(id).then((response) => {
+        setData({ ...data, title: response.title, desc: response.desc });
+      });
+    }
   }, []);
 
   return (
