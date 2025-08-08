@@ -11,9 +11,9 @@ const BlogTable = (props) => {
               <td>{item.author}</td>
               <td>{item.createdDate}</td>
               <td className="action-btns">
-                <NavLink to={`/admin/blog/delete-blog/${item.id}`}>
-                  <button>Delete</button>
-                </NavLink>
+                <button onClick={() => props.handleDelete(item.id)}>
+                  Delete
+                </button>
                 <NavLink to={`/admin/blog/edit-blog/${item.id}`}>
                   <button>Edit</button>
                 </NavLink>

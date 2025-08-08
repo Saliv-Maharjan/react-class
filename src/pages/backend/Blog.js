@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 import BlogTable from "../../components/backend/BlogTable";
 import { useEffect, useState } from "react";
-import { getAllBlogs } from "../../services/backend/blogData";
+import { deleteBlog, getAllBlogs } from "../../services/backend/blogData";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
@@ -10,6 +10,18 @@ const Blog = () => {
       setBlogs(response);
     });
   }, []);
+
+  const handleDelete = (id) => {
+    deleteBlog(id)
+      .then((response) => {
+        getAllBlogs().then((response) => {
+          setBlogs(response);
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <>
@@ -32,7 +44,7 @@ const Blog = () => {
               </tr>
             </thead>
             <tbody>
-              <BlogTable blogData={blogs} />
+              <BlogTable blogData={blogs} handleDelete={handleDelete} />
             </tbody>
           </table>
         </div>

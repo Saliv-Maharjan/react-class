@@ -1,13 +1,6 @@
 {
   "blogData": [
     {
-      "title": "Blog 1",
-      "author": "Saliv",
-      "desc": "This is the description for the Blog Post 1.",
-      "createdDate": "2025-07-25",
-      "id": "1"
-    },
-    {
       "title": "Blog 2",
       "author": "Pranish",
       "desc": "This is the description for the Blog Post 2.",
@@ -34,6 +27,13 @@
       "desc": "This is the description for the Blog Post 4.",
       "createdDate": "2025-07-25",
       "id": "5"
+    },
+    {
+      "id": "ded3",
+      "title": "Blog 6",
+      "desc": "This is Blog 6",
+      "author": "admin@gmail.com",
+      "createdDate": "2025-08-08T02:18:34.999Z"
     }
   ],
   "userData": [
