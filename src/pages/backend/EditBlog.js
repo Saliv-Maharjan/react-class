@@ -1,15 +1,11 @@
 import { useEffect, useState } from "react";
 import { NavLink, useNavigate, useParams } from "react-router";
 import { getBlogById, updateBlog } from "../../services/backend/blogData";
+import { toast } from "react-toastify";
 
 const EditBlog = () => {
   const navigate = useNavigate();
   const { id } = useParams();
-
-  const buttonClick = () => {
-    console.log(data);
-    navigate("/admin/blog");
-  };
 
   const [data, setData] = useState({
     title: "",
@@ -59,6 +55,7 @@ const EditBlog = () => {
       updateBlog(id, data)
         .then((response) => {
           navigate("/admin/blog");
+          toast.success("Edited Sucess");
         })
         .catch((error) => {
           console.log(error);

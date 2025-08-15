@@ -2,6 +2,7 @@ import { NavLink } from "react-router";
 import BlogTable from "../../components/backend/BlogTable";
 import { useEffect, useState } from "react";
 import { deleteBlog, getAllBlogs } from "../../services/backend/blogData";
+import { toast } from "react-toastify";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
@@ -16,6 +17,7 @@ const Blog = () => {
       .then((response) => {
         getAllBlogs().then((response) => {
           setBlogs(response);
+          toast.warn("Deleted");
         });
       })
       .catch((error) => {
@@ -29,7 +31,11 @@ const Blog = () => {
         <div className="blog-title">
           <h2>BLOG PAGE</h2>
           <NavLink to={`/admin/blog/create-blog`}>
-            <button>Add Blog</button>
+            <button
+              style={{ background: "green", color: "white", border: "none" }}
+            >
+              Add Blog
+            </button>
           </NavLink>
         </div>
 

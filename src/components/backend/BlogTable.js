@@ -11,14 +11,22 @@ const BlogTable = (props) => {
               <td>{item.author}</td>
               <td>{item.createdDate}</td>
               <td className="action-btns">
-                <button onClick={() => props.handleDelete(item.id)}>
+                <button
+                  onClick={() => props.handleDelete(item.id)}
+                  style={{ background: "red", color: "white", border: "none" }}
+                >
                   Delete
                 </button>
                 <NavLink to={`/admin/blog/edit-blog/${item.id}`}>
-                  <button>Edit</button>
-                </NavLink>
-                <NavLink to={`/admin/blog/view-blog/${item.id}`}>
-                  <button>View</button>
+                  <button
+                    style={{
+                      background: "yellow",
+                      color: "black",
+                      border: "none",
+                    }}
+                  >
+                    Edit
+                  </button>
                 </NavLink>
               </td>
             </tr>

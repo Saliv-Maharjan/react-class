@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router";
 import { createBlog } from "../../services/backend/blogData";
+import { toast } from "react-toastify";
 
 const CreateBlog = () => {
   const navigate = useNavigate();
@@ -51,6 +52,7 @@ const CreateBlog = () => {
       createBlog(data)
         .then((response) => {
           navigate("/admin/blog");
+          toast.success("Blog creatted sucessfully!");
         })
         .catch((error) => {
           console.log(error);

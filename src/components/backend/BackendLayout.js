@@ -1,10 +1,9 @@
 import { useEffect } from "react";
 import { Outlet, useNavigate } from "react-router";
-import { AUTH_TOKEN } from "../../services/backend/auth";
-
 import Header from "./Header";
-import Sidebar from "./Sidebar";
 import Footer from "./Footer";
+import Sidebar from "./Sidebar";
+import { AUTH_TOKEN } from "../../services/backend/auth";
 
 const BackendLayout = () => {
   const navigate = useNavigate();

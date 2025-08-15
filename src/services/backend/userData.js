@@ -1,43 +1,52 @@
-export const getAllUsers = () => {
-  const userData = [
-    {
-      id: 1,
-      firstName: "Saliv",
-      lastName: "Maharjan",
-      contactNum: "9866445340",
-      emailAddress: "salivmrj@gmail.com",
-      homeAddress: "Kirtipur, Panga-8",
-    },
-    {
-      id: 2,
-      firstName: "Pranish",
-      lastName: "Khadge",
-      contactNum: "9866445341",
-      emailAddress: "pigge@gmail.com",
-      homeAddress: "Lalitpur, Lagankhel",
-    },
-    {
-      id: 3,
-      firstName: "Raman",
-      lastName: "Kayastha",
-      contactNum: "9866445342",
-      emailAddress: "raman@gmail.com",
-      homeAddress: "Bhaktapur, Thimi",
-    },
-    {
-      id: 4,
-      firstName: "Sujal",
-      lastName: "Shakya",
-      contactNum: "9866445344",
-      emailAddress: "sujal@gmail.com",
-      homeAddress: "Bhaktapur, Thimi",
-    },
-  ];
-  return userData;
+import axios from "axios";
+import { sha256 } from "../../utils/encryption";
+
+export const getAllUsers = async () => {
+  const response = await axios.get("http://localhost:4000/userData");
+  return response.data;
 };
 
-export const getUserById = (id) => {
-  const users = getAllUsers();
-  const user = users.find((x) => x.id === parseInt(id));
-  return user;
+export const getUserById = async (id) => {
+  const response = await axios.get(`http://localhost:4000/userData/${id}`);
+  return response.data;
+};
+
+export const createUser = async (userData) => {
+  try {
+    userData.password = await sha256(userData.password);
+    const response = await axios.post(
+      "http://localhost:4000/userData",
+      userData
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+};
+
+export const updateUser = async (id, userData) => {
+  try {
+    if (userData.password === "") {
+      delete userData.password;
+    }
+    const response = await axios.patch(
+      `http://localhost:4000/userData/${id}`,
+      userData
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+};
+
+export const deleteUser = async (id) => {
+  try {
+    const response = await axios.delete(`http://localhost:4000/userData/${id}`);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
 };

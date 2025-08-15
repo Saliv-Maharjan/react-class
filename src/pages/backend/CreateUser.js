@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router";
-import { getUserById, updateUser } from "../../services/backend/userData";
+import { useState } from "react";
+import { useNavigate } from "react-router";
+import { createUser } from "../../services/backend/userData";
 import { toast } from "react-toastify";
 
-const EditUser = () => {
-  const { id } = useParams();
+const CreateUser = () => {
   const navigate = useNavigate();
 
   const [data, setData] = useState({
@@ -25,20 +24,6 @@ const EditUser = () => {
     const { name, value } = e.target;
     setData({ ...data, [name]: value });
   };
-
-  useEffect(() => {
-    if (id) {
-      getUserById(id).then((response) => {
-        setData({
-          ...data,
-          name: response.name,
-          email: response.email,
-          password: response.password,
-          num: response.num,
-        });
-      });
-    }
-  }, []);
 
   const handleSubmit = () => {
     let hasError = false;
@@ -67,10 +52,10 @@ const EditUser = () => {
 
     setErrors(validationErrors);
     if (!hasError) {
-      updateUser(id, data)
+      createUser(data)
         .then((response) => {
           navigate("/admin/users");
-          toast.success("Edited Sucess");
+          toast.success("User created sucessfully!");
         })
         .catch((error) => {
           console.log(error);
@@ -83,7 +68,7 @@ const EditUser = () => {
   return (
     <div className="user-view-section">
       <div className="user-title">
-        <span>Edit User Data</span>
+        <span>Add a User</span>
       </div>
 
       <div className="user-box">
@@ -94,44 +79,50 @@ const EditUser = () => {
             name="name"
             onChange={handleChange}
             value={data.name}
+            autoComplete="off"
           />
           {errors.name && <p className="error">{errors.name}</p>}
-        </div>
-        <div className="user-field">
-          <label>Email</label>
-          <input
-            type="text"
-            name="email"
-            value={data.email}
-            onChange={handleChange}
-          />
-          {errors.email && <p className="error">{errors.email}</p>}
-        </div>
-        <div className="user-field">
-          <input
-            type="hidden"
-            name="password"
-            value={data.password}
-            onChange={handleChange}
-          />
-          {errors.password && <p className="error">{errors.password}</p>}
         </div>
         <div className="user-field">
           <label>Email Address</label>
           <input
             type="text"
-            name="num"
-            value={data.num}
+            name="email"
             onChange={handleChange}
+            value={data.email}
+            autoComplete="off"
+          />
+          {errors.email && <p className="error">{errors.email}</p>}
+        </div>
+        <div className="user-field">
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            onChange={handleChange}
+            value={data.password}
+            autoComplete="off"
+          />
+          {errors.password && <p className="error">{errors.password}</p>}
+        </div>
+        <div className="user-field">
+          <label>Contact Number</label>
+          <input
+            type="text"
+            name="num"
+            onChange={handleChange}
+            value={data.num}
+            autoComplete="off"
           />
           {errors.num && <p className="error">{errors.num}</p>}
         </div>
+
         <div className="user-field">
-          <button onClick={handleSubmit}>Edit User</button>
+          <button onClick={handleSubmit}>Add User</button>
         </div>
       </div>
     </div>
   );
 };
 
-export default EditUser;
+export default CreateUser;

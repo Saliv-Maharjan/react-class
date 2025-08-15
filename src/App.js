@@ -1,5 +1,8 @@
 import "./App.css";
+import "react-toastify/dist/ReactToastify.css";
+
 import { BrowserRouter, Routes, Route } from "react-router";
+import { ToastContainer } from "react-toastify";
 
 import FrontendLayout from "./components/frontend/FrontendLayout";
 import BackendLayout from "./components/backend/BackendLayout";
@@ -16,8 +19,8 @@ import EditBlog from "./pages/backend/EditBlog";
 import ViewBlog from "./pages/backend/ViewBlog";
 import DeleteBlog from "./pages/backend/DeleteBlog";
 import Users from "./pages/backend/Users";
-import ViewUser from "./pages/backend/ViewUser";
 import EditUser from "./pages/backend/EditUser";
+import CreateUser from "./pages/backend/CreateUser";
 
 function App() {
   return (
@@ -48,7 +51,7 @@ function App() {
             />
 
             <Route path="/admin/users" element={<Users />} />
-            <Route path="/admin/users/view-user/:id" element={<ViewUser />} />
+            <Route path="/admin/users/create-user" element={<CreateUser />} />
             <Route path="/admin/users/edit-user/:id" element={<EditUser />} />
 
             <Route path="/admin/setting" element={<Setting />} />
@@ -57,6 +60,8 @@ function App() {
           <Route path="/admin-login" element={<AdminLogin />} />
         </Routes>
       </BrowserRouter>
+
+      <ToastContainer />
     </>
   );
 }

@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router";
 import { doLogin } from "../../services/backend/auth";
+import { toast } from "react-toastify";
 
 const AdminLogin = () => {
   const navigate = useNavigate();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -22,21 +22,26 @@ const AdminLogin = () => {
     setPassword(inputPassword);
   };
 
-  const HandleBtnClick = () => {
-    const loginStatus = doLogin(email, password);
-
+  // Handle Form Submission
+  const HandleBtnClick = async () => {
+    let error = false;
     if (email === "") {
-      setEmailError("* Email Required");
+      setEmailError("Email is required");
+      error = true;
+    } else if (password === "") {
+      setPasswordError("Password is required");
+      error = true;
     }
 
-    if (password === "") {
-      setPasswordError("* Password Required");
+    if (error) {
+      return;
     }
-
+    const loginStatus = await doLogin(email, password);
     if (loginStatus) {
-      navigate("/Admin/Dashboard");
+      navigate("/admin/dashboard");
+      toast.success("Login Sucessfull");
     } else {
-      setLoginError("Invalid Email and Password!");
+      toast.error("Incorrect email or password!");
     }
   };
 
@@ -72,7 +77,6 @@ const AdminLogin = () => {
               value="LOGIN"
               onClick={() => HandleBtnClick()}
             />
-            <span className="error">{loginError}</span>
           </div>
           <div>
             <NavLink to="/">Back to User Page</NavLink>

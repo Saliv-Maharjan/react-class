@@ -1,13 +1,6 @@
 {
   "blogData": [
     {
-      "title": "Blog 2",
-      "author": "Pranish",
-      "desc": "This is the description for the Blog Post 2.",
-      "createdDate": "2025-07-25",
-      "id": "2"
-    },
-    {
       "title": "Blog 3",
       "author": "Raman",
       "desc": "This is the description for the Blog Post 3.",
@@ -34,40 +27,43 @@
       "desc": "This is Blog 6",
       "author": "admin@gmail.com",
       "createdDate": "2025-08-08T02:18:34.999Z"
+    },
+    {
+      "id": "d171",
+      "title": "Pigge Blog",
+      "desc": "Pigge",
+      "author": "prigge@gmail.com",
+      "createdDate": "2025-08-14T11:04:36.491Z"
     }
   ],
   "userData": [
     {
-      "id": "1",
-      "firstName": "Saliv",
-      "lastName": "Maharjan",
-      "contactNum": "9866445340",
-      "emailAddress": "salivmrj@gmail.com",
-      "homeAddress": "Kritipur"
+      "id": "701c",
+      "name": "Saliv Maharjan",
+      "email": "saliv@gmail.com",
+      "password": "14121ccf69d2bd796aa54e90a7ccf690c7a72edc8edd4558f5a51ec96095616a",
+      "num": "9866445340"
     },
     {
-      "id": "2",
-      "firstName": "Pranish",
-      "lastName": "Khadge",
-      "contactNum": "9866445341",
-      "emailAddress": "pigge@gmail.com",
-      "homeAddress": "Lalitpur, Lagankhel"
+      "id": "fa1e",
+      "name": "Pranish Khadge",
+      "email": "pigge@gmail.com",
+      "password": "07d09b4103776dd1fe2055430dce7ab16220e2d4e1e7e053fc7a39655c27759b",
+      "num": "9866445341"
     },
     {
-      "id": "3",
-      "firstName": "Raman",
-      "lastName": "Kayastha",
-      "contactNum": "9866445342",
-      "emailAddress": "raman@gmail.com",
-      "homeAddress": "Bhaktapur, Thimi"
+      "id": "6f07",
+      "name": "Raman Kayastha",
+      "email": "raman@gmail.com",
+      "password": "916ecec5449f6df00e07699370a7232e12d48120b066a3011bf5113c7077928e",
+      "num": "9866445342"
     },
     {
-      "id": "4",
-      "firstName": "Sujal",
-      "lastName": "Shakya",
-      "contactNum": "9866445344",
-      "emailAddress": "sujal@gmail.com",
-      "homeAddress": "Bhaktapur, Thimi"
+      "id": "5465",
+      "name": "Sujal Shakya",
+      "email": "sujal@gmail.com",
+      "password": "178a22025d9220683cabd9b30bfa32224d5c248fb3a3faf2fc863c0cb65ac189",
+      "num": "9866445343"
     }
   ]
 }
